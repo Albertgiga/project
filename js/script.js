@@ -162,11 +162,24 @@ const options = {
     name: '',
     witdh: 1200,
     height: 900,
+    speed: 10,
+    mph: 6,
     colors: {
         border: 'black',
         bg: 'red'
+    },
+    makeTest: function() {
+        console.log('Test completed');
     }
 };
+
+options.makeTest();
+
+const {border, bg} = options.colors;
+
+console.log(border);
+
+console.log(Object.keys(options).length);
 
 // console.log(options["colors"]["bg"]);
 
@@ -180,4 +193,28 @@ for (let key in options){
     } else {
         console.log(`Свойство: ${key} имеет значение: ${options[key]}`);
     }
+}
+
+//                                  ARRAY AND PSARRAY
+
+const arr = [1, 2, 5, 7, 8];
+
+// console.log(arr.length);
+// console.log(arr)
+
+arr.forEach(function (item, i, arr){
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+});
+
+// arr.pop();
+// arr.push(12);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+for (let key of arr){
+    console.log(key);
 }
