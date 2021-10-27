@@ -123,3 +123,61 @@ console.log(car.substring(38, 48));
 
 console.log(car.substr(38, 10));
 
+const num = 12.5;
+console.log(Math.round(num));
+
+const text = '12.72px';
+console.log(parseInt(text));
+console.log(parseFloat(text));
+
+//                              Callback Function
+
+function first() {
+    setTimeout(function() {
+        console.log('1');
+    }, 500);
+}
+
+function second() {
+    console.log('2');
+}
+
+first();
+second();
+
+function learnJS(lang, callback){
+    console.log(`Я учу язик ${lang}`);
+    callback();
+}
+
+function done(){
+    console.log('Done');
+}
+
+learnJS('JavaScript', done);
+
+//                                  OBJECT, DESTRACTIONS OF OBJECTS
+
+const options = {
+    name: '',
+    witdh: 1200,
+    height: 900,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    }
+};
+
+// console.log(options["colors"]["bg"]);
+
+delete options.witdh;
+
+for (let key in options){
+    if (typeof(options[key]) === 'object'){
+        for (let i in options[key]){
+            console.log(`Свойство: ${i} имеет значение: ${options[key][i]}`);
+        }
+    } else {
+        console.log(`Свойство: ${key} имеет значение: ${options[key]}`);
+    }
+}
