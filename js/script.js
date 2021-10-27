@@ -197,7 +197,14 @@ for (let key in options){
 
 //                                  ARRAY AND PSARRAY
 
-const arr = [1, 2, 5, 7, 8];
+const arr = [1, 2, 15, 27, 8];
+
+arr.sort(compare);
+console.log(arr);
+
+function compare(a, b){
+    return a - b;
+}
 
 // console.log(arr.length);
 // console.log(arr)
@@ -218,3 +225,90 @@ arr.forEach(function (item, i, arr){
 for (let key of arr){
     console.log(key);
 }
+
+const str = prompt('', '');
+const products = str.split(', ');
+products.sort();
+console.log(products.join('; '));
+
+//                              COPYFOR URL OR VALUE
+
+let a = 5,
+    b = a;
+
+b = 10;
+
+// console.log(b);
+// console.log(a);
+
+function copy(mainObj) {
+    let objCopy = {};
+     
+    let key;
+    for (key in mainObj){
+        objCopy[key] = mainObj[key];
+    }
+
+    return objCopy;
+}
+
+const numbers = {
+    a: 5,
+    b: 3,
+    c: {
+        x: 2,
+        y: 8
+    }
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+
+console.log(newNumbers);
+console.log(numbers);
+
+const add = {
+    z: 5,
+    q: 17
+};
+
+const clone = Object.assign({}, add);
+
+clone.z = 10;
+
+console.log(add);
+console.log(clone);
+
+const oldArray = ['a', 'v', 'f'];
+const newArray = oldArray.slice();
+
+newArray[1] = 'asdasdfa2w';
+console.log(oldArray);
+console.log(newArray);
+
+const video = ['youtube', 'tik-tok'],
+      blogs = ['wordpress', 'time'],
+      internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+const num1 = [1, 5, 8];
+log(...num1);
+
+const array = ['a', 'b'];
+
+const newAarray = [...array];
+
+const q = {
+    one: 1,
+    two: 2
+};
+
+const newObj = {...q};
