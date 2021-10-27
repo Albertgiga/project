@@ -80,26 +80,46 @@
 
 // console.log(personalMovieDB);
 
-getModule(10, 1);
+//                  FUNCTION
 
-function getModule(x, y){
-    return console.log(x + y);
-}
-//function declaretion - можна обявлять перед созданием
+// getModule(10, 1);
+
+// function getModule(x, y){
+//     return console.log(x + y);
+// }
+// //function declaretion - можна обявлять перед созданием
 
 
-let fun = function(){
-    return 10 + 2;
-};
-//function expression - можна обявлять после созданием
-console.log(fun());
+// let fun = function(){
+//     return 10 + 2;
+// };
+// //function expression - можна обявлять после созданием
+// console.log(fun());
 
-const calc = a => a * a;
-console.log(calc(12));
+// const calc = a => a * a;
+// console.log(calc(12));
 
-const calcul = (a, b) => {
-    console.log('1');
-    return console.log((a * (b + a)));
-};
+// const calcul = (a, b) => {
+//     console.log('1');
+//     return console.log((a * (b + a)));
+// };
 
-calcul(4, 6);
+// calcul(4, 6);
+
+
+//                      METHODS AND PROPERTIES
+
+let test = 'test';
+
+console.log(test.toLocaleUpperCase());
+
+const car = 'I live in Britan. And I have buetiful car Porshe';
+
+console.log(car.indexOf('car'));
+
+console.log(car.slice(38, 48));
+
+console.log(car.substring(38, 48));
+
+console.log(car.substr(38, 10));
+
